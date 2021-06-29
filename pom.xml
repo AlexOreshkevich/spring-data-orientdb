@@ -62,7 +62,7 @@
         </sonatypeOssDistMgmtSnapshotsUrl>
         <!-- dependency versions -->
         <slf4j.version>1.7.13</slf4j.version>
-        <logback.version>1.1.3</logback.version>
+        <logback.version>1.2.3</logback.version>
         <orientdb.version>2.1.8</orientdb.version>
         <aspectj.version>1.8.7</aspectj.version>
         <spring.version>4.2.4.RELEASE</spring.version>
@@ -92,7 +92,7 @@
         <developer>
             <id>trainings</id>
             <name>Dzmitry Naskou</name>
-            <email></email>
+            <email/>
             <roles>
                 <role>Developer</role>
             </roles>
@@ -110,7 +110,7 @@
         <developer>
             <id>sleroy</id>
             <name>Sylvain Leroy</name>
-            <email></email>
+            <email/>
             <roles>
                 <role>Developer</role>
             </roles>
@@ -119,7 +119,7 @@
         <developer>
             <id>vidakovic</id>
             <name>Aleksandar Vidakovic</name>
-            <email></email>
+            <email/>
             <roles>
                 <role>Developer</role>
             </roles>
@@ -556,30 +556,23 @@
                                 <finalName>${shaded.name}</finalName>
                                 <minimizeJar>false</minimizeJar>
                                 <transformers>
-                                    <transformer
-                                            implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                                    <transformer
-                                            implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                    <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                                    <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                         <resource>META-INF/spring.handlers</resource>
                                     </transformer>
-                                    <transformer
-                                            implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                    <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                         <resource>META-INF/spring.schemas</resource>
                                     </transformer>
-                                    <transformer
-                                            implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                    <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                         <resource>META-INF/spring.factories</resource>
                                     </transformer>
-                                    <transformer
-                                            implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                    <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                         <resource>META-INF/cxf/org.apache.cxf.bus.factory</resource>
                                     </transformer>
-                                    <transformer
-                                            implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                    <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                         <resource>META-INF/cxf/bus-extensions.txt</resource>
                                     </transformer>
-                                    <transformer
-                                            implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                         <manifestEntries>
                                             <Main-Class>${shaded.main}</Main-Class>
                                             <X-Compile-Source-JDK>${maven.compiler.source}</X-Compile-Source-JDK>
